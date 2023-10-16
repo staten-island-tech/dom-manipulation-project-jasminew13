@@ -1,0 +1,10 @@
+#container-box {
+    background-color: cornsilk;
+    font-size: 3vh;
+    color: black;
+    text-align: center;
+}
+
+.picture {
+    width: 10rem;
+}

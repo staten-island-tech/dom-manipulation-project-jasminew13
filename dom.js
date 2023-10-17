@@ -1,26 +1,26 @@
 const DOMselectors = {
-    form: document.querySelector("#form"),
+    form: document.getElementById("#form"),
     box: document.getElementById("container-box"),
-    albumName: document.querySelector(".album-name"),
-    h2: document.querySelectorAll
+    points: document.querySelectorAll(".point"),
 };
-function containerbox(box,text) {
+console.log(DOMselectors);
+
+function containerbox(box, text) {
     box.style.boxColor = "white";
-    text.innerHTML = "box"
+    text.innerHTML = "box";
+    text.textContent = "IEUHHFAEWPOIMHGCHO";
+    text.style.fontSize = "40px";
 }
 containerbox(DOMselectors.box, DOMselectors.text);
 
-DOMselectors.box.insertAdjacentElement("beforeend", "#form");
 
-DOMselectors.form.addEventListener("submit",function(event){
+DOMselectors.form.addEventListener("submit", function(event){
+    containerbox(DOMselectors.box, DOMselectors.text);
     event.preventDefault();
     console.log(DOMselectors.albumName.value);
-    DOMselectors.h2s.forEach((el)=> el.textContent = DOMselectors.albumName.value
+    DOMselectors.points.forEach((el)=> el.textContent = DOMselectors.point.value
     );
 });
 DOMselectors.button.addEventListener("click", function (){
     box(DOMselectors.box, DOMselectors.text);
-});
-function changeLi(){
-    let 
-}
+}); 

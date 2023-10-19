@@ -1,6 +1,6 @@
 const DOMselectors = {
     form: document.getElementById("#form"),
-    box: document.getElementById("container-box"),
+    card: document.getElementById("card"),
     points: document.querySelectorAll(".point"),
 };
 console.log(DOMselectors);
@@ -13,13 +13,11 @@ function containerbox(box, text) {
 }
 containerbox(DOMselectors.box, DOMselectors.text);
 
-
-DOMselectors.form.addEventListener("submit", function(event){
-    containerbox(DOMselectors.box, DOMselectors.text);
+DOMselectors.form.addEventListener("submit", function(event) {
+    let input = DOMselectors.form.value;
     event.preventDefault();
-    console.log(DOMselectors.albumName.value);
-    DOMselectors.points.forEach((el)=> el.textContent = DOMselectors.point.value
-    );
+    DOMselectors.card.insertAdjacentHTML("afterend", 
+    `<div class="card"><h2 class="cardheader">${DOMselectors.form.value}</h2></div></div>`);
 });
 DOMselectors.button.addEventListener("click", function (){
     box(DOMselectors.box, DOMselectors.text);

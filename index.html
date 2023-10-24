@@ -6,17 +6,28 @@
     <title>how code</title>
 </head>
 <body>
-    <form action="" id="form">
+    <form action="submit" id="form">
         <label for="album">album name</label>
         <input type="text" name="album" class="album-name"/>
         <input type="submit" value="click here"/>
+    </form> 
+    <form action="submit" id="name">
+        <label for="album">artist name</label>
+        <input type="text" name="album" class="artist-name"/>
+        <input type="submit" value="click here"/>
     </form>
+    <form action="submit" id="image">
+        <label for="album">album picture</label>
+        <input type="url" name="album" class="album-pic"/>
+        <input type="submit" value="click here"/>
+    </form>
+   
      
     <div class="gallery">
         <section class="card">
-        <img class=card-img src="" alt="album photo">
+        <img class=card-img src="${}" alt="album photo">
         <h2 class="cardheader"></h2>
-    </section>
+        </section>
     </div>
 
 

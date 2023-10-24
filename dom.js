@@ -1,17 +1,21 @@
 const DOMselectors = {
     form: document.getElementById("form"),
+    artistname: document.getElementById("name"),
+    img: document.getElementById("image"),
     card: document.getElementById("card"),
 };
 console.log(DOMselectors);
 
-function cardAndtext(card, text) {
+/*function cardAndtext(card, text) {
     card.style.boxColor = "red";
     text.innerHTML = "box";
     text.textContent = "ok";
     text.style.fontSize = "40px";
 }
 containerbox(DOMselectors.box, DOMselectors.text);
+*/
 
+    
 DOMselectors.form.addEventListener("submit", function(event) {
     this.querySelector(".gallery");
     event.preventDefault();
@@ -21,3 +25,8 @@ DOMselectors.form.addEventListener("submit", function(event) {
 DOMselectors.button.addEventListener("click", function (){
     box(DOMselectors.box, DOMselectors.text);
 }); 
+
+//const album = make album
+//addcard(album)
+//clear fields
+//addremove buttons

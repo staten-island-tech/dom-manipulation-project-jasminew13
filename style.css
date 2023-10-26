@@ -1,16 +1,30 @@
+body,
+html,
+* {
+    box-sizing: border-box;
+    margin: 20;
+    padding: 0;
+}
 .card{
-    background-color: cornsilk;
+    height: 50vh;
+    width: 20vw;
+    background-color: rgb(244, 238, 216);
     font-size: 3vh;
     color: black;
-    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    font-size: 70%;
 }
 .gallery{
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
+    position: relative;
 }
 .card-img{
-    margin: 3rem;
-    width: 90%;
-    height: 60%;
+    margin-top: 3rem;
+    width: 85%;
+    height: 70%;
 }

@@ -1,15 +1,17 @@
 const DOMselectors = {
- /*   artistname: document.getElementById("name"),
-    img: document.getElementById("image"),
-    card: document.getElementById("card"),*/
+    albumname: document.querySelector("album"),
+    artistname: document.querySelector("name"),
+    image: document.querySelector("image"),
+    card: document.querySelector("card"),
+    button: querySelectorAll("button")
 };
 console.log(DOMselectors);
 
 // let me cook pls
-list.addEventListener('click', function(ok){
-     if (ok.target.className == 'delete'){
-        const li = ok.target.parentElement;
-        list.removeChild(li);
+DOMselectors.addEventListener('click', function(ok){
+     DOMselectors..forEach(element => {
+        
+     });
      }
 });
 
@@ -18,8 +20,15 @@ const addForm = document.forms['add-album'];
 addForm.addEventListener('submit', function(ok){
     ok.preventDefault();
     document.querySelector('input[type="text"]').value;
-    addForm.card.insertAdjacentHTML("afterend", 
-    `<div class="card"><h2 class="cardheader">${DOMselectors.form.value}</h2></div>`);
+    addForm.card.insertAdjacentHTML(afterend, 
+    `<div class="gallery">
+    <section class="card">
+    <img class=card-img src="${DOMselectors.image.value} alt="album photo">
+    <h2 class="displayalbumname">${DOMselectors.albumname.value}</h2>
+    <h2 class="displayartist">${"name"}</h2>
+    <button class="delete">delete</button>
+    </section>
+</div>`);
 }); 
 
     albumName.textContent = value;
@@ -31,5 +40,4 @@ addForm.addEventListener('submit', function(ok){
 
 //const album = make album
 //addcard(album)
-//clear fields
-//addremove buttons
+//clear fields addremove button*/

@@ -23,7 +23,7 @@ html,
     justify-content: space-around;
     position: relative;
 }
-.card-img{
+card-img{
     margin-top: 3rem;
     width: 85%;
     height: 70%;

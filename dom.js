@@ -2,23 +2,22 @@ const DOMselectors = {
     albumname: document.querySelector(".album"),
     artistname: document.querySelector(".name"),
     image: document.querySelector(".image"),
-    card: document.querySelector(".card"),
+    gallery: document.querySelector(".card"),
     submit: document.getElementById("#submit"),
     button: document.querySelector(".button"),
 };
-DOMselectors.submit.addEventListener('submit', function (ok) {
+DOMselectors.form.addEventListener('submit', function (ok) {
     ok.preventDefault();
     console.log(DOMselectors.image.value, DOMselectors.artistname.value, DOMselectors.albumname.value)
    
     function cards (){
-    DOMselectors.card.insertAdjacentHTML("beforeend", 
-    `<div class="gallery">
-    <p><img src=${DOMselectors.image.value} class=card-img></p>
-    <p><h2 class="displayalbumname">${DOMselectors.albumname.value}</h2></p>
+    DOMselectors.gallery.insertAdjacentHTML("afterend", 
+    <div class="card">
+    <img class="card-img" src= ${DOMselectors.image.value}></img>
+    <div class="displayalbumname">${DOMselectors.albumname.value}</div>
     <p><h2 class="displayartist">${DOMselectors.artistname.value}</h2></p>
     <p><button class="delete">delete</button></p>
-    </div>`
-    )}
+    </div>)}
 ok()
 cards()
 clearfields()

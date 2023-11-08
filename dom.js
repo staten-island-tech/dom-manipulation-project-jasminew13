@@ -16,7 +16,7 @@ DOMselectors.form.addEventListener("submit", function (event) {
      DOMselectors.gallery.insertAdjacentHTML("beforeend", `
      <div class="card">
      <img class="card-img" src= ${DOMselectors.image.value}>
-     <div class="displayalbumname">${DOMselectors.album.value}</div>
+     <h2 class="displayalbumname">${DOMselectors.album.value}</h2>
      <h2 class="displayartist">${DOMselectors.name.value}</h2>
      <button class="delete" type ="button">delete</button>
      </div>

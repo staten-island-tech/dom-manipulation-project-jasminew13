@@ -9,10 +9,11 @@
     flex-wrap:wrap;
     justify-content: space-around;
     font-size: 70%;
+    margin-bottom: 2rem;
 }
 .gallery{
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
 }

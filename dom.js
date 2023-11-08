@@ -1,41 +1,41 @@
 const DOMselectors = {
-    albumname: document.querySelector(".album"),
-    artistname: document.querySelector(".name"),
+    album: document.querySelector(".album"),
+    name: document.querySelector(".name"),
     image: document.querySelector(".image"),
-    gallery: document.querySelector(".card"),
-    submit: document.getElementById("#submit"),
-    button: document.querySelector(".button"),
-};
-DOMselectors.form.addEventListener('submit', function (ok) {
-    ok.preventDefault();
-    console.log(DOMselectors.image.value, DOMselectors.artistname.value, DOMselectors.albumname.value)
-   
-    function cards (){
-    DOMselectors.gallery.insertAdjacentHTML("afterend", 
-    <div class="card">
-    <img class="card-img" src= ${DOMselectors.image.value}></img>
-    <div class="displayalbumname">${DOMselectors.albumname.value}</div>
-    <p><h2 class="displayartist">${DOMselectors.artistname.value}</h2></p>
-    <p><button class="delete">delete</button></p>
-    </div>)}
-ok()
-cards()
+    card: document.querySelector(".card"),
+    gallery: document.querySelector(".gallery"),
+    form: document.querySelector("#form"),
+    deletecard: document.querySelector("#deletecard")
+}
+
+DOMselectors.form.addEventListener("submit", function (event) {
+ event.preventDefault(); 
+ console.log(DOMselectors.image.value,DOMselectors.name.value, DOMselectors.album.value)
+
+   function cardcard (){
+     DOMselectors.gallery.insertAdjacentHTML("beforeend", `
+     <div class="card">
+     <img class="card-img" src= ${DOMselectors.image.value}>
+     <div class="displayalbumname">${DOMselectors.album.value}</div>
+     <h2 class="displayartist">${DOMselectors.name.value}</h2>
+     <button class="delete" type ="button">delete</button>
+     </div>
+     `)}
+cardcard()
 clearfields()
-remove()
+deletecard()
 });
 
-function clearfields(){
-    DOMselectors.albumname.value = ""
-    DOMselectors.artistname.value = ""
-    DOMselectors.picture.value = ""
+ function clearfields(){
+    DOMselectors.album.value = ""
+    DOMselectors.name.value = ""
+    DOMselectors.image.value = ""
 }
 
 
-/* function remove(){
-    let btns = document.querySelectorAll("button");
-    btns.forEach((button)=>
-     button.addEventListener('click', function(event){
-     console.log(event.target.parentELement);
-    })
-  );
-} */
+function deletecard () {
+    const button = document.querySelectorAll(".delete");
+    button.forEach((button) => 
+    button.addEventListener ("click", function (button){
+        button.target.parentElement.remove()}
+        ))};

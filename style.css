@@ -1,9 +1,9 @@
 .card{
     height: 50vh;
     width: 20vw;
-    background-color: rgb(216, 239, 244);
+    background-color: rgb(247, 227, 199);
     font-size: 3vh;
-    color: black;
+    color: rgb(0, 0, 0);
     align-items: center;
     display: flex;
     flex-wrap:wrap;
